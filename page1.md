@@ -1,5 +1,5 @@
 layout: page
 title: "Page 1"
-permalink: /page1
+permalink: /pageOne
 
 # This is just another page
