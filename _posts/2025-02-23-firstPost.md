@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "This is the first post"
+title: "FirstPost"
 date: 2025-02-23 12:00:00 -000
 categories: GENERAL
 ---
