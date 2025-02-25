@@ -1,6 +1,6 @@
 # Wellcome to Cesar's Page
 
-# This document
+## This document
 This is just an example document to show some basic markdown syntax such as *Italics*, **Bold** and _Underscore_.
 
 > This is a blokquote
@@ -28,7 +28,7 @@ This is also code
 
 `public int i`
 
-And these are links
+## Some links
 
 [Azure](https://www.azure.com)
 
