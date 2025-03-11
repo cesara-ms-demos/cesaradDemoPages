@@ -63,6 +63,8 @@ jobs:
       - name: List files
         run: ls -la         
       - name: Untar files
-        run: mkdir -p /webcontent && tar -xvf artifact.tar -C /webcontent
+        run: |
+          mkdir -p ${{ github.workspace }}/webcontent
+          tar -xvf artifact.tar -C ${{ github.workspace }}/webcontent
       - name: List files
         run: ls -la            
