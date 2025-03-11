@@ -61,7 +61,7 @@ jobs:
         with:
            name: github-pages
       - name: Extract ZIP
-        run: github-pages.zip
+        run: unzip ./github-pages.zip
       - name: Untar files
-        run: tar -xvf artifact.tar -C /content/
+        run: tar -xvf artifact.tar -C ./content/
         
