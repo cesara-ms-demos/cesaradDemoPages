@@ -63,6 +63,6 @@ jobs:
       - name: List files
         run: ls -la         
       - name: Untar files
-        run: tar -xvf artifact.tar #-C /content/
+        run: mkdir -p /content && tar -xvf artifact.tar -C /content
       - name: List files
         run: ls -la            
