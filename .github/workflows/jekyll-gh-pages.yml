@@ -1,5 +1,5 @@
 # Sample workflow for building and deploying a Jekyll site to GitHub Pages
-name: Deploy Jekyll with GitHub Pages dependencies preinstalled
+name: Deploy Jekyll
 
 on:
   # Runs on pushes targeting the default branch
@@ -78,13 +78,8 @@ jobs:
         uses: azure/CLI@v1
         with:
           inlineScript: |
-            az storage blob upload-batch --account-name <STORAGE_ACCOUNT_NAME> --auth-mode key -d '$web' -s .
-      - name: Purge CDN endpoint
-        uses: azure/CLI@v1
-        with:
-        inlineScript: |
-           az cdn endpoint purge --content-paths  "/*" --profile-name "CDN_PROFILE_NAME" --name "CDN_ENDPOINT" --resource-group "RESOURCE_GROUP"
-
+            az storage blob upload-batch --account-name cesaraghpagesdemostorage --auth-mode key -d '$web' -s .
+            
       # Azure logout
       - name: logout
         run: |
