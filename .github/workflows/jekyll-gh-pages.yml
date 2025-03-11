@@ -62,8 +62,7 @@ jobs:
            name: github-pages
       - name: List files
         run: ls -la         
-      - name: Extract ZIP
-        run: unzip ./github-pages.zip
       - name: Untar files
         run: tar -xvf artifact.tar -C ./content/
-        
+      - name: List files
+        run: ls -la            
