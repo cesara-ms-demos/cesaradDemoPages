@@ -54,9 +54,14 @@ jobs:
   # Deployment to external site
   deployExternal:
     runs-on: ubuntu-latest
+    needs: build
     steps:
       - name: Download a Build Artifact
         uses: actions/download-artifact@v4
         with:
            name: github-pages
-  
+      - name: Extract ZIP
+        run: github-pages.zip
+      - name: Untar files
+        run: tar -xvf artifact.tar -C /content/
+        
